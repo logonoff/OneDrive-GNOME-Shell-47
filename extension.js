@@ -80,6 +80,14 @@ class Indicator extends PanelMenu.Button {
                 'gnome-terminal --tab --title="Status" --command=\"systemctl --user status onedrive\"');
         });
         this.menu.addMenuItem(itemStatus);
+        
+        let itemProcess = new PopupMenu.PopupMenuItem(_('Show service process'));
+        itemStatus.connect('activate', () => {
+
+            GLib.spawn_command_line_sync(
+                'gnome-terminal --tab --title="Process" --command=\"journalctl --user-unit=onedrive -f\"');
+        });
+        this.menu.addMenuItem(itemProcess);
 
         let itemWeb = new PopupMenu.PopupMenuItem(_('Open One Drive web site'));
         itemWeb.connect('activate', () => {
@@ -141,11 +149,11 @@ class Indicator extends PanelMenu.Button {
     aggiorna() {
         if(this.isOneDriveActive())
         {
+            let oldlastLineStatus = this.lastLineStatus;
             this.getLastLineStatus();
-            if(this.lastLineStatus.indexOf("Starting a sync with OneDrive") >= 0 
-            || this.lastLineStatus.indexOf("Syncing changes from OneDrive") >= 0
-            || this.lastLineStatus.indexOf("Downloading file") >= 0
-            || this.lastLineStatus.indexOf("Uploading new file") >= 0)
+            if(oldlastLineStatus !== this.lastLineStatus 
+                || (this.lastLineStatus.indexOf("Downloading") >= 0 && this.lastLineStatus.indexOf("done.") === -1)
+                || (this.lastLineStatus.indexOf("Uploading") >= 0 && this.lastLineStatus.indexOf("done.") === -1))
             {
                 this.statusIcon.set_property("style_class", "workingIcon");
                 this.statusIcon.set_property("icon_name", "system-search-symbolic");
@@ -252,4 +260,3 @@ class Extension {
 function init(meta) {
     return new Extension(meta.uuid);
 }
-

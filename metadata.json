@@ -3,7 +3,7 @@
   "description": "One Drive extension",
   "name": "One Drive",
   "shell-version": [
-    "3.38"
+    "42.4"
   ],
   "url": "https://github.com/dbazza/oneDrive",
   "uuid": "onedrive@diegobazzanella.com",
