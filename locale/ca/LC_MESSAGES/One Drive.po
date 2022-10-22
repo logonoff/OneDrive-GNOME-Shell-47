@@ -7,12 +7,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
-"Report-Msgid-Bugs-To: dmerida80@gmail.com\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 11:03+0200\n"
-"PO-Revision-Date: 2022-10-22 21:02+0200\n"
+"PO-Revision-Date: 2022-10-22 17:34+0200\n"
 "Last-Translator: Diego Mérida López <dmerida80@gmail.com>\n"
-"Language-Team: Italian <dmerida80@gmail.com>\n"
-"Language: It\n"
+"Language-Team: Catalan; Valencian <dmerida80@gmail.com>\n"
+"Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,24 +25,24 @@ msgstr "One Drive"
 
 #: extension.js:59 extension.js:182
 msgid "Login..."
-msgstr "Accedere..."
+msgstr "Iniciar Sessió..."
 
 #: extension.js:76
 msgid "Show service status"
-msgstr "Mostra lo stato del servizio"
+msgstr "Mostra l'estat del Servei"
 
 #: extension.js:84
 msgid "Show service process"
-msgstr "Muestra lo stato del processo"
+msgstr "Mosta el procés"
 
 #: extension.js:92
 msgid "Open One Drive web site"
-msgstr "Apri il sito web di One Drive"
+msgstr "Obre el lloc web"
 
 #: extension.js:98
 msgid "Open One Drive local folder"
-msgstr "Apri la cartella locale di One Drive"
+msgstr "Obre el fitxer local"
 
 #: extension.js:171
 msgid "Logout..."
-msgstr "Disconnettersi..."
+msgstr "Tancar Sessió..."
