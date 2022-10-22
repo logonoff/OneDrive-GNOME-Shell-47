@@ -82,7 +82,7 @@ class Indicator extends PanelMenu.Button {
         this.menu.addMenuItem(itemStatus);
         
         let itemProcess = new PopupMenu.PopupMenuItem(_('Show service process'));
-        itemStatus.connect('activate', () => {
+        itemProcess.connect('activate', () => {
 
             GLib.spawn_command_line_sync(
                 'gnome-terminal --tab --title="Process" --command=\"journalctl --user-unit=onedrive -f\"');
