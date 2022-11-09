@@ -39,6 +39,8 @@ install: ## Install extansion
 	cp -R . ~/.local/share/gnome-shell/extensions/onedrive\@diegomerida.com
 
 build:
+	@gnome-extensions pack --extra-source=imgs  --extra-source=locale --force
+build_with_login:
 	@gnome-extensions pack --extra-source=imgs --extra-source=login.js --extra-source=locale --force
 
 # lg - Extansion lg manager, run ALT+F2
