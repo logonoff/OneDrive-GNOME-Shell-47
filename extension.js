@@ -107,6 +107,7 @@ class Indicator extends PanelMenu.Button {
         let problem = false;
         if(!problem && !this.controllaBinario("onedrive")) problem = true;
         if(!problem && !this.controllaBinario("systemctl")) problem = true;
+        if(!problem && !this.controllaBinario("journalctl")) problem = true;
         if(!problem && !this.controllaBinario("touch")) problem = true;
         if(problem) return; 
 
