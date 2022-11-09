@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-22 11:03+0200\n"
+"POT-Creation-Date: 2022-11-09 16:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "One Drive"
 msgstr ""
 
-#: extension.js:59 extension.js:182
+#: extension.js:59 extension.js:188
 msgid "Login..."
 msgstr ""
 
@@ -29,18 +29,18 @@ msgstr ""
 msgid "Show service status"
 msgstr ""
 
-#: extension.js:84
+#: extension.js:87
 msgid "Show service process"
 msgstr ""
 
-#: extension.js:92
+#: extension.js:98
 msgid "Open One Drive web site"
 msgstr ""
 
-#: extension.js:98
+#: extension.js:104
 msgid "Open One Drive local folder"
 msgstr ""
 
-#: extension.js:171
+#: extension.js:177
 msgid "Logout..."
 msgstr ""
