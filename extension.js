@@ -85,10 +85,13 @@ class Indicator extends PanelMenu.Button {
         this.menu.addMenuItem(itemStatus);
         
         let itemProcess = new PopupMenu.PopupMenuItem(_('Show service process'));
+        let procapp = Gio.AppInfo.create_from_commandline(
+            "journalctl --user-unit=onedrive -f",
+            null,
+            Gio.AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION 
+            |Gio.AppInfoCreateFlags.NEEDS_TERMINAL);
         itemProcess.connect('activate', () => {
-
-            GLib.spawn_command_line_sync(
-                'gnome-terminal --tab --title="Process" --command=\"journalctl --user-unit=onedrive -f\"');
+            procapp.launch([], global.create_app_launch_context(0, -1));
         });
         this.menu.addMenuItem(itemProcess);
 
