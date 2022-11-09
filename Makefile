@@ -19,7 +19,7 @@ help:
 debug_log: ## Debug log
 	@journalctl -f -o cat GNOME_SHELL_EXTENSION_UUID=onedrive@diegomerida.com
 
-debug_nested:
+test_nested:
 	@dbus-run-session -- gnome-shell --nested --wayland
 
 locale_build: ## Build locale
