@@ -2,7 +2,8 @@
   "description": "One Drive extension",
   "name": "One Drive Resurrect",
   "shell-version": [
-    "42"
+    "42",
+    "40"
   ],
   "url": "https://github.com/diegstroyer/oneDrive",
   "uuid": "onedrive@diegomerida.com",
