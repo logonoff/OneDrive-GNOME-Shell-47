@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
-"Report-Msgid-Bugs-To: dmerida80@gmail.com\n"
-"POT-Creation-Date: 2022-10-22 11:03+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-09 17:21+0100\n"
 "PO-Revision-Date: 2022-10-22 21:02+0200\n"
 "Last-Translator: Diego Mérida López <dmerida80@gmail.com>\n"
 "Language-Team: Italian <dmerida80@gmail.com>\n"
@@ -19,30 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Gtranslator 41.0\n"
 
-#: extension.js:40
 msgid "One Drive"
 msgstr "One Drive"
 
-#: extension.js:59 extension.js:182
 msgid "Login..."
 msgstr "Accedere..."
 
-#: extension.js:76
 msgid "Show service status"
 msgstr "Mostra lo stato del servizio"
 
-#: extension.js:84
 msgid "Show service process"
-msgstr "Muestra lo stato del processo"
+msgstr "Mostra lo stato del processo"
 
-#: extension.js:92
 msgid "Open One Drive web site"
 msgstr "Apri il sito web di One Drive"
 
-#: extension.js:98
 msgid "Open One Drive local folder"
 msgstr "Apri la cartella locale di One Drive"
 
-#: extension.js:171
 msgid "Logout..."
 msgstr "Disconnettersi..."
