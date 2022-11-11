@@ -1,11 +1,10 @@
 {
-  "description": "One Drive extension",
+  "description": "One Drive extension. This extension is not affiliated, funded, or in any way associated with Microsoft and OneDrive.",
   "name": "One Drive Resurrect",
   "shell-version": [
-    "42",
-    "40"
+    "42"
   ],
   "url": "https://github.com/diegstroyer/oneDrive",
   "uuid": "onedrive@diegomerida.com",
-  "version": 4.1
+  "version": 5.1
 }
