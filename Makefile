@@ -43,4 +43,4 @@ build: ## Build without login
 build_with_login: ## Build with login
 	@gnome-extensions pack --extra-source=imgs --extra-source=login.js --extra-source=locale --force
 
-# lg - Extansion lg manager, run ALT+F2
+# lg - Extension lg manager, run ALT+F2
