@@ -3,8 +3,8 @@
 
 define PRINT_HELP_PYSCRIPT
 import re, sys
-print("\x1b[1m%-20s\x1b[0m%s" % ("Использовать:", "make [КОММАНДА]"))
-print("\x1b[1m%-20s %s\x1b[0m" % ("КОММАНДА", "ОПИСАНИЕ"))
+print("\x1b[1m%-20s\x1b[0m%s" % ("usage:", "make [COMMAND]"))
+print("\x1b[1m%-20s %s\x1b[0m" % ("COMMAND", "Description"))
 for line in sys.stdin:
 	match = re.match(r'^([a-zA-Z_-]+):.*?## (.*)$$', line)
 	if match:
@@ -19,7 +19,7 @@ help:
 debug_log: ## Debug log
 	@journalctl -f -o cat GNOME_SHELL_EXTENSION_UUID=onedrive@diegomerida.com
 
-test_nested:
+test_nested: ## Test extension in nested Gnome Shell
 	@dbus-run-session -- gnome-shell --nested --wayland
 
 locale_build: ## Build locale
@@ -38,9 +38,9 @@ install: ## Install extansion
 	@rm -rf ~/.local/share/gnome-shell/extensions/onedrive\@diegomerida.com &&\
 	cp -R . ~/.local/share/gnome-shell/extensions/onedrive\@diegomerida.com
 
-build:
+build: ## Build without login 
 	@gnome-extensions pack --extra-source=imgs  --extra-source=locale --force
-build_with_login:
+build_with_login: ## Build with login
 	@gnome-extensions pack --extra-source=imgs --extra-source=login.js --extra-source=locale --force
 
-# lg - Extansion lg manager, run ALT+F2
+# lg - Extension lg manager, run ALT+F2
