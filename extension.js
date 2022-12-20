@@ -57,21 +57,14 @@ class Indicator extends PanelMenu.Button {
         this.menuItemOnOff = menuItemOnOff;
 
         let itemLogin = new PopupMenu.PopupMenuItem(_('Login...'));
+        let loginapp = Gio.AppInfo.create_from_commandline("onedrive",
+            null,
+            Gio.AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION |
+            Gio.AppInfoCreateFlags.NEEDS_TERMINAL);
         itemLogin.connect('activate', () => {
-                
-            if(this.menuItemOnOff._switch.state)
-            {
-                this.menuItemOnOff.setToggleState(false);
-                this.onOff().bind(this);
-            }
-            else
-            {
-                GLib.spawn_command_line_async('gjs ' + ExtensionUtils.getCurrentExtension().dir.get_path() + '/login.js');
-            }
-                
+            loginapp.launch([], global.create_app_launch_context(0, -1));
         });
         this.menu.addMenuItem(itemLogin);
-        this.itemLogin = itemLogin;
 
         let itemStatus = new PopupMenu.PopupMenuItem(_('Show service status'));
         let app = Gio.AppInfo.create_from_commandline(
