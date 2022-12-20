@@ -15,7 +15,7 @@ One Drive Gnome Shell Extension can:
 - show One Drive local folder;
 - show emblems on One Drive local folder;
 - open One Drive web site;
-- perform authentication via graphical gtk interactive dialog;
+- perform authentication via command line;
 
 # Install
 
