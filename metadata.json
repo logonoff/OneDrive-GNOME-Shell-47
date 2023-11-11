@@ -1,13 +1,10 @@
 {
-  "description": "One Drive extension. This extension is not affiliated, funded, or in any way associated with Microsoft and OneDrive.",
-  "name": "One Drive Resurrect",
+  "name": "Onedrive",
+  "description": "Show and Control Onedrive Client",
+  "uuid": "onedrive@client.onedrive.com",
   "shell-version": [
-    "41",
-    "42",
-    "43",
-    "44"
+    "45"
   ],
-  "url": "https://github.com/diegstroyer/oneDrive",
-  "uuid": "onedrive@diegomerida.com",
-  "version": 7
+  "url":"https://github.com/dvmasterfx/Onedrive-Gnome-Shell-45",
+  "gettext-domain":"onedrive@client.onedrive.com"
 }

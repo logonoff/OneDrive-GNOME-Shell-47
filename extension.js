@@ -16,23 +16,21 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-/* exported init */
-
 const GETTEXT_DOMAIN = 'One Drive';
 
-const { GObject, St } = imports.gi;
+import GObject from 'gi://GObject';
+import St from 'gi://St';
 
-const Gettext = imports.gettext.domain(GETTEXT_DOMAIN);
-const _ = Gettext.gettext;
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
-const ExtensionUtils = imports.misc.extensionUtils;
-const Main = imports.ui.main;
-const PanelMenu = imports.ui.panelMenu;
-const PopupMenu = imports.ui.popupMenu;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
-const Mainloop = imports.mainloop;
-const GLib = imports.gi.GLib;
-const Gio   = imports.gi.Gio;
+const Mainloop = imports.mainloop
+
+import GLib from 'gi://GLib';
+import Gio from 'gi://Gio';
 
 const Indicator = GObject.registerClass(
 class Indicator extends PanelMenu.Button {
@@ -73,8 +71,8 @@ class Indicator extends PanelMenu.Button {
                     loginapp.launch([], global.create_app_launch_context(0, -1));
                 this.menuItemOnOff.setToggleState(true);
                 this.onOff().bind(this);
-	        }
-	    });
+            }
+        });
         this.menu.addMenuItem(itemLogin);
         this.itemLogin = itemLogin;
 
@@ -247,11 +245,11 @@ class Indicator extends PanelMenu.Button {
     }
 });
 
-class Extension {
+export default class OnedriveExtension extends Extension {
     constructor(uuid) {
-        this._uuid = uuid;
+        super(uuid);
 
-        ExtensionUtils.initTranslations(GETTEXT_DOMAIN);
+        this.initTranslations('onedrive@client.onedrive.com');
     }
 
     enable() {
