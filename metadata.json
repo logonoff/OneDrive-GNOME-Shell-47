@@ -2,6 +2,7 @@
   "name": "Onedrive",
   "description": "Show and Control Onedrive Client",
   "uuid": "onedrive@client.onedrive.com",
+  "version":2,
   "shell-version": [
     "45"
   ],

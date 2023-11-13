@@ -14,9 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
+ *This extension is ported to gnome 45 from Onedrive Ressurect Extension
  */
-
-const GETTEXT_DOMAIN = 'One Drive';
 
 import GObject from 'gi://GObject';
 import St from 'gi://St';
