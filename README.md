@@ -2,6 +2,7 @@
 
 This is a Gnome Shell extension I use as frontend for the unofficial abraunegg onedrive client (https://github.com/abraunegg/onedrive) on my desktop.
 This extension was created by Diego Bazzanella and modified by me to update it and add something new.
+This extension is forked from diegstroyer https://github.com/diegstroyer/oneDrive
 
 # Features
 
