@@ -22,5 +22,5 @@ One Drive Gnome Shell Extension can:
 
 Install the client. Detailed instructions here: https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md. If you have ubuntu installed take a look to <a href="https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md#important-information-for-all-ubuntu-and-ubuntu-based-distribution-users">this advise</a>.
 
-Go to gnome shell extension page, searh for "OneDrive resurect" and install it. You have to make login and activate the service via extension. That's all!
+Go to gnome shell extension page, searh for "OneDrive Client" and install it. You have to make login and activate the service via extension. That's all!
 
