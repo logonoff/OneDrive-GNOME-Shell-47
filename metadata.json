@@ -2,9 +2,9 @@
   "name": "Onedrive Client",
   "description": "Show and Control Onedrive Client",
   "uuid": "onedrive@client.onedrive.com",
-  "version":3,
+  "version":7,
   "shell-version": [
-    "45"
+    "46"
   ],
   "url":"https://github.com/dvmasterfx/Onedrive-Gnome-Shell-45",
   "gettext-domain":"onedrive@client.onedrive.com"
