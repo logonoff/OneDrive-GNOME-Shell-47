@@ -55,8 +55,6 @@ class Indicator extends PanelMenu.Button {
 
         box.add_child(this.statusIcon);
 
-        box.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
-
         this.add_child(box);
 
         let menuItemOnOff = new PopupMenu.PopupSwitchMenuItem("OneDrive", this.isOneDriveActive());
