@@ -1,6 +1,6 @@
-# OneDrive Gnome Shell Extension
+# OneDrive GNOME Shell Extension
 
-This is a Gnome Shell extension I use as frontend for the unofficial abraunegg OneDrive client (https://github.com/abraunegg/onedrive) on my desktop.
+This is a GNOME Shell extension I use as frontend for the unofficial abraunegg OneDrive client (https://github.com/abraunegg/onedrive) on my desktop.
 This extension was created by Diego Bazzanella and modified by me to update it and add something new.
 This extension is forked from diegstroyer https://github.com/diegstroyer/oneDrive
 
@@ -20,6 +20,6 @@ OneDrive Gnome Shell Extension can:
 
 # Install
 
-Install the client. Detailed instructions here: https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md. If you have Ubuntu installed take a look at `<a href="https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md#important-information-for-all-ubuntu-and-ubuntu-based-distribution-users">`this advise`</a>`.
+Install the client. Detailed instructions here: https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md. If you have Ubuntu installed take a look at [this advise](https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md#important-information-for-all-ubuntu-and-ubuntu-based-distribution-users).
 
-Go to gnome shell extension page, searh for "OneDrive Client" and install it. You have to make login and activate the service via extension. That's all!
+Go to the GNOME Shell Extension page, searh for "OneDrive Client" and install it. You have to login and activate the onedrive service via the extension. That's all!
