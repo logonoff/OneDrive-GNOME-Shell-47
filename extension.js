@@ -178,6 +178,13 @@ class Indicator extends PanelMenu.Button {
         return true;
     }
 
+    destroy() {
+        if (this._updateLoop) {
+            GLib.source_remove(this._updateLoop);
+        }
+        super.destroy();
+    }
+
     setEmblem(state) {
         let priority = GLib.PRIORITY_DEFAULT;
         let cancellable = new Gio.Cancellable();

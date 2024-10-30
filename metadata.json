@@ -1,12 +1,12 @@
 {
   "name": "OneDrive Client",
   "description": "Show and Control OneDrive Client",
-  "uuid": "onedrive@client.onedrive.com",
+  "uuid": "onedrive@logonoff.co",
   "version":8,
   "shell-version": [
     "46",
     "47"
   ],
-  "url":"https://github.com/dvmasterfx/Onedrive-Gnome-Shell-45",
-  "gettext-domain":"onedrive@client.onedrive.com"
+  "url":"https://github.com/logonoff/OneDrive-GNOME-Shell-47",
+  "gettext-domain":"onedrive@logonoff.co"
 }
