@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-29 21:01-0400\n"
+"PO-Revision-Date: 2022-10-22 17:34+0200\n"
+"Last-Translator: Diego Mérida López <dmerida80@gmail.com>\n"
+"Language-Team: Catalan; Valencian <dmerida80@gmail.com>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 41.0\n"
+
+msgid "OneDrive"
+msgstr "OneDrive"
+
+msgid "Login..."
+msgstr "Iniciar Sessió..."
+
+msgid "Show service status"
+msgstr "Mostra l'estat del Servei"
+
+msgid "Show service process"
+msgstr "Mosta el procés"
+
+msgid "Open OneDrive website"
+msgstr "Obre el lloc web"
+
+msgid "Open OneDrive local folder"
+msgstr "Obre el fitxer local"
+
+msgid "Logout..."
+msgstr "Tancar Sessió..."

@@ -1,6 +1,8 @@
 .PHONY:
 .DEFAULT_GOAL := help
 
+EXTENSION_ID="onedrive@logonoff.co"
+
 define PRINT_HELP_PYSCRIPT
 import re, sys
 print("\x1b[1m%-20s\x1b[0m%s" % ("usage:", "make [COMMAND]"))
@@ -17,34 +19,29 @@ help:
 	@python3 -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 debug_log: ## Debug log
-	@journalctl -f -o cat GNOME_SHELL_EXTENSION_UUID=onedrive@diegomerida.com
+	@journalctl -f -o cat GNOME_SHELL_EXTENSION_UUID=$(EXTENSION_ID)
 
 test_nested: ## Test extension in nested Gnome Shell
 	@dbus-run-session -- gnome-shell --nested --wayland
 
 locale_build: ## Build locale
-	@msgfmt locale/it/LC_MESSAGES/OneDrive.po -o locale/it/LC_MESSAGES/OneDrive.mo &&\
-	msgfmt locale/es/LC_MESSAGES/OneDrive.po -o locale/es/LC_MESSAGES/OneDrive.mo &&\
-	msgfmt locale/ca/LC_MESSAGES/OneDrive.po -o locale/ca/LC_MESSAGES/OneDrive.mo &&\
-	msgfmt locale/el/LC_MESSAGES/OneDrive.po -o locale/el/LC_MESSAGES/OneDrive.mo &&\
-	msgfmt locale/el/LC_MESSAGES/OneDrive.po -o locale/nl/LC_MESSAGES/OneDrive.mo
+	@for po_file in po/*.po; do \
+		lang=$$(basename $$po_file .po); \
+		msgfmt $$po_file -o locale/$$lang/LC_MESSAGES/OneDrive.mo; \
+	done
 
 locale_update: ## Update locale
-	@xgettext --no-location -o  locale/OneDrive.pot *.js &&\
-	msgmerge --no-location --previous --silent --lang=It locale/it/LC_MESSAGES/OneDrive.po locale/OneDrive.pot --output locale/it/LC_MESSAGES/OneDrive.po &&\
-	msgmerge --no-location --previous --silent --lang=es locale/es/LC_MESSAGES/OneDrive.po locale/OneDrive.pot --output locale/es/LC_MESSAGES/OneDrive.po &&\
-	msgmerge --no-location --previous --silent --lang=ca_ES locale/ca/LC_MESSAGES/OneDrive.po locale/OneDrive.pot --output locale/ca/LC_MESSAGES/OneDrive.po &&\
-	msgmerge --no-location --previous --silent --lang=el locale/ca/LC_MESSAGES/OneDrive.po locale/OneDrive.pot --output locale/el/LC_MESSAGES/OneDrive.po &&\
-	msgmerge --no-location --previous --silent --lang=nl locale/ca/LC_MESSAGES/OneDrive.po locale/OneDrive.pot --output locale/nl/LC_MESSAGES/OneDrive.po
-
+	@xgettext --no-location -o po/OneDrive.pot *.js && \
+	for po_file in po/*.po; do \
+		lang=$$(basename $$po_file .po); \
+		msgmerge --no-location --previous --silent $$po_file po/OneDrive.pot --output $$po_file; \
+	done
 
 install: ## Install extension
-	@rm -rf ~/.local/share/gnome-shell/extensions/onedrive\@diegomerida.com &&\
-	cp -R . ~/.local/share/gnome-shell/extensions/onedrive\@diegomerida.com
+	@rm -rf ~/.local/share/gnome-shell/extensions/$(EXTENSION_ID) &&\
+	cp -R . ~/.local/share/gnome-shell/extensions/$(EXTENSION_ID)
 
 build: ## Build without login
-	@gnome-extensions pack --extra-source=imgs  --extra-source=locale --force
-build_with_login: ## Build with login
-	@gnome-extensions pack --extra-source=imgs --extra-source=login.js --extra-source=locale --force
+	@gnome-extensions pack --extra-source=imgs --podir=po --force
 
 # lg - Extension lg manager, run ALT+F2
